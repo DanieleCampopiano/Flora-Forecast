@@ -1,0 +1,20 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-floraforecast-dev-160949-authRole",
+      "UnauthRoleArn": "arn:aws:iam::917481863345:role/amplify-floraforecast-dev-160949-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::917481863345:role/amplify-floraforecast-dev-160949-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-floraforecast-dev-160949-deployment",
+      "UnauthRoleName": "amplify-floraforecast-dev-160949-unauthRole",
+      "StackName": "amplify-floraforecast-dev-160949",
+      "StackId": "arn:aws:cloudformation:us-east-1:917481863345:stack/amplify-floraforecast-dev-160949/9d039330-1686-11ee-9b90-0e7d18c48f31",
+      "AmplifyAppId": "d2t0tl0qu9l4e2"
+    },
+    "categories": {
+      "auth": {
+        "floraforecastee966e32": {}
+      }
+    }
+  }
+}
