@@ -4,11 +4,11 @@ import { Amplify } from 'aws-amplify';
 import { Authenticator, View, useTheme, Image, Text } from '@aws-amplify/ui-react';
 import awsExports from './aws-exports';
 import '@aws-amplify/ui-react/styles.css';
-import SiteNav from './components/Common/SiteNav';
-import SiteFooter from './components/Common/SiteFooteer';
+import SiteNav from './components/common/SiteNav';
+import SiteFooter from './components/common/SiteFooteer';
 import {Route,Routes} from 'react-router-dom';
 import HomePage from './components/home/HomePage';
-import Contacts from './components/contacts/Contacts';
+import Payment from './components/payment/Payment';
 
 Amplify.configure(awsExports);
 
@@ -33,7 +33,7 @@ function App() {
       return (
         <View textAlign="center" padding={tokens.space.large}>
           <Text color={tokens.colors.neutral[80]}>
-            &copy; CRS 2023
+            &copy; Flora Forecast 2023
           </Text>
         </View>
       );
@@ -46,9 +46,9 @@ function App() {
       <div>
         <SiteNav logOut={signOut} />
         <Routes>
-          <Route path='*' element={<HomePage />} />
+          <Route path="/payment*" element={<Payment />} />
+          <Route path='/homePage' element={<HomePage />} />
           <Route path='/' exact={true} element={<HomePage />} />
-          <Route path='/contacts' element={<Contacts />} />
         </Routes>
         <SiteFooter />
       </div>

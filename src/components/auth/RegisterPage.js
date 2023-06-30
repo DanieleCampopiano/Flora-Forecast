@@ -31,7 +31,7 @@ function RegisterPage() {
                             <Form.Control type="password"  minLength="8" placeholder="Confirm Password" />
                         </Form.Group>
                         
-                        <Button variant="primary" type="submit">Register &gt;&gt;</Button>&nbsp;
+                        <Button variant="success" type="submit">Register &gt;&gt;</Button>&nbsp;
                     </Form>
                 </Col>
             </Row>
