@@ -16,7 +16,7 @@ function Payment() {
       <PayPalScriptProvider
         options={{
           "client-id":
-            "ASgmkIsl9ueJTnWHa5CW9GNekuMaF8NGpthqG-c5MB-8KexEWIVt0Zm5l685Dpa_ZwDwxtpwYDe-aqns",
+            "AfGHfJfSKXsoM_WU3SAgRZr9sPdywKPVX8I465Ch-2g-xO6YSXAp0cPX6kM6gorK01t5GUQPzdtkZXwU",
         }}
       >
         <PayPalButtons
