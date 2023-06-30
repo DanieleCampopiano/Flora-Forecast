@@ -11,7 +11,7 @@ function SiteNav(props) {
         <header>
             <Navbar bg="dark" expand="lg" variant="dark">
                 <Container>
-                    <Navbar.Brand><Nav.Link href="/">Flora Forecast</Nav.Link></Navbar.Brand>
+                    <Navbar.Brand>Flora Forecast</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-md-auto">

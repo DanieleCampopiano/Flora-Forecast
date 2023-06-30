@@ -1,7 +1,10 @@
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
+import { useNavigate } from 'react-router-dom';
 import "./Payment.css";
 
 function Payment() {
+  const navigate = useNavigate();
+
   return (
     <div className="App-body">
       <h1>Make the payment</h1>
@@ -35,6 +38,8 @@ function Payment() {
             const details = await actions.order.capture();
             const name = details.payer.name.given_name;
             alert("Transaction completed by " + name);
+            
+            navigate('/homePage');
           }}
         />
       </PayPalScriptProvider>

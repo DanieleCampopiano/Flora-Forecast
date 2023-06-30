@@ -48,7 +48,7 @@ function App() {
         <Routes>
           <Route path="/payment*" element={<Payment />} />
           <Route path='/homePage' element={<HomePage />} />
-          <Route path='/' exact={true} element={<HomePage />} />
+          <Route path='/' exact={true} element={<Payment />} />
         </Routes>
         <SiteFooter />
       </div>
