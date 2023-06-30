@@ -4,14 +4,14 @@ import "./Payment.css";
 function Payment() {
   return (
     <div className="App-body">
-      <h1>PayPal Developer E-Book</h1>
+      <h1>Make the payment</h1>
       <img
-        height="300"
-        src="/ebook.jpg"
-        alt="How to be Great at Anything (Book Cover)"
+        height="200"
+        src="\img\World.gif"
+        alt="Sottotitolo"
       />
       <p>
-        <span className="book-price">13.99€</span>
+        <span className="book-price">29.99€</span>
       </p>
       <PayPalScriptProvider
         options={{
@@ -25,7 +25,7 @@ function Payment() {
               purchase_units: [
                 {
                   amount: {
-                    value: "13.99",
+                    value: "00.01",
                   },
                 },
               ],
