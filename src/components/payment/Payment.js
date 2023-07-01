@@ -39,7 +39,7 @@ function Payment() {
             const name = details.payer.name.given_name;
             alert("Transaction completed by " + name);
             
-            navigate('/homePage');
+            navigate('/homepage');
           }}
         />
       </PayPalScriptProvider>
