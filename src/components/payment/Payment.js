@@ -5,8 +5,13 @@ import "./Payment.css";
 function Payment() {
   const navigate = useNavigate();
 
+  const lambdaFunction = () => {
+    window.location.href = "https://google.it";
+  };
+
   return (
     <div className="App-body">
+      <button onClick={lambdaFunction}>Processa Immagine Satellitare</button>
       <h1>Make the payment</h1>
       <img
         height="200"
