@@ -16,5 +16,26 @@
         "floraforecastee966e32": {}
       }
     }
+  },
+  "localflora": {
+    "awscloudformation": {}
+  },
+  "flora": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-floraforecast-flora-173521-authRole",
+      "UnauthRoleArn": "arn:aws:iam::917481863345:role/amplify-floraforecast-flora-173521-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::917481863345:role/amplify-floraforecast-flora-173521-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-floraforecast-flora-173521-deployment",
+      "UnauthRoleName": "amplify-floraforecast-flora-173521-unauthRole",
+      "StackName": "amplify-floraforecast-flora-173521",
+      "StackId": "arn:aws:cloudformation:us-east-1:917481863345:stack/amplify-floraforecast-flora-173521/1103aa40-18ee-11ee-bc9e-0a091c46662d",
+      "AmplifyAppId": "d2bbs6minkedy2"
+    },
+    "categories": {
+      "auth": {
+        "floraforecast40b6d08b": {}
+      }
+    }
   }
 }
