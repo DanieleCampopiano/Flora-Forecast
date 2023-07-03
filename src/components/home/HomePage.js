@@ -1,4 +1,7 @@
 import React from "react";
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import "./HomePage.css";
 
 function HomePage() {
   const callAPI = (anniPrevisione, zona) => {
@@ -29,18 +32,16 @@ function HomePage() {
   return (
     <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
       <div style={{ maxWidth: "1100px", textAlign: "center" }}>
-        <img src="/img/mondo.jpg" alt="Mondo" style={{ width: "100%", height: "auto" }} />
+        <img src="/img/world.png" alt="Mondo" style={{ width: "100%", height: "auto" }} />
   
         <form style={{ marginTop: "20px" }}>
-          <h1>SELEZIONA LA TUA AREA!</h1>
-          <label>Anni da prevedere: </label>
-          <input type="text" id="anniPrevisione" />
-          <label>   nella zona di: </label>
-          <input type="text" id="zona" />
-          <br /><br />
-          <button type="button" onClick={handleButtonClick}>
-            CALCOLA L'EVOLUZIONE
-          </button>
+          <Form.Control type="text" placeholder="Anni da prevedere" id="anniPrevisione" />
+          <br></br>
+          <Form.Control type="text" placeholder="Zona di interesse" id="zona"/>
+            <br></br>
+          <Button variant="success" size="lg" className="custom-btn" type="button" onClick={handleButtonClick}>
+            Calcola
+          </Button>
         </form>
       </div>
     </div>
