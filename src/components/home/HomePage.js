@@ -27,6 +27,7 @@ function HomePage() {
     const anniPrevisione = anniPrevisioneInput.value;
     const zona = zonaInput.value;
     callAPI(anniPrevisione, zona);
+    window.open("https://h6yzz8pcxa.execute-api.us-east-1.amazonaws.com/", "_blank");
   };
 
   return (
