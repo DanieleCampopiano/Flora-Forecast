@@ -1,6 +1,6 @@
 import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 import { useNavigate } from "react-router-dom";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -17,8 +17,14 @@ function Payment() {
   const navigate = useNavigate();
   const [paymentCompleted, setPaymentCompleted] = useState(false);
 
+  useEffect(() => {
+    const isPaymentCompleted = localStorage.getItem("paymentCompleted") === "true";
+    setPaymentCompleted(isPaymentCompleted);
+  }, []);
+
   const handlePaymentComplete = () => {
     setPaymentCompleted(true);
+    localStorage.setItem("paymentCompleted", "true");
     navigate("/homepage");
   };
 
@@ -69,7 +75,7 @@ function Payment() {
             />
           </PayPalScriptProvider>
           ) : (
-            <p className="payment-completed-message">Pagamento già effettuato</p>
+            <p className="payment-completed-message">Pagamento già effettuato!</p>
           )}
         </Col>
       </Row>

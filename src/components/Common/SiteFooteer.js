@@ -4,7 +4,7 @@ function SiteFooter() {
     return ( 
     <footer className="py-5 my-5">
     <Container className="px-4">
-        <p className="text-end">&copy; 2023 </p>
+        <p className="text-end">&copy; 2023, Flora Forecast </p>
     </Container>
     </footer>)
 }
