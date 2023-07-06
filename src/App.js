@@ -9,6 +9,7 @@ import SiteFooter from "./components/Common/SiteFooteer";
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./components/home/HomePage";
 import Payment from "./components/payment/Payment";
+import React, { useEffect, useState } from "react";
 
 Amplify.configure(awsExports);
 
@@ -37,15 +38,22 @@ function App() {
     },
   };
 
+  const [paymentCompleted, setPaymentCompleted] = useState(false);
+
+  useEffect(() => {
+    const isPaymentCompleted = localStorage.getItem("paymentCompleted") === "true";
+    setPaymentCompleted(isPaymentCompleted);
+  }, []);
+
   return (
     <Authenticator loginMechanisms={["email"]} components={components}>
       {({ signOut, user }) => (
         <div>
           <SiteNav logOut={signOut} />
             <Routes>
+            <Route path="/" element={paymentCompleted ? <HomePage /> : <Payment />} />
               <Route path="/payment" element={<Payment />} />
               <Route path="/homepage" element={<HomePage />} />
-              <Route path="/" exact={true} element={<Payment />} />
             </Routes>
           <SiteFooter />
         </div>

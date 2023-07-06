@@ -25,7 +25,9 @@ function Payment() {
   const handlePaymentComplete = () => {
     setPaymentCompleted(true);
     localStorage.setItem("paymentCompleted", "true");
-    navigate("/homepage");
+    setTimeout(() => {
+      navigate("/homepage");
+    }, 3000);
   };
 
   return (
