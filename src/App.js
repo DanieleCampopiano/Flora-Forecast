@@ -1,4 +1,3 @@
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Amplify } from "aws-amplify";
 import { Authenticator, View, useTheme, Image, Text } from "@aws-amplify/ui-react";
@@ -6,6 +5,7 @@ import awsExports from "./aws-exports";
 import "@aws-amplify/ui-react/styles.css";
 import SiteNav from "./components/Common/SiteNav";
 import SiteFooter from "./components/Common/SiteFooteer";
+import { CLOUDFRONT_URL_LOGO } from "./constants.js"
 import { Route, Routes } from "react-router-dom";
 import HomePage from "./components/home/HomePage";
 import Payment from "./components/payment/Payment";
@@ -14,13 +14,15 @@ import React, { useEffect, useState } from "react";
 Amplify.configure(awsExports);
 
 function App() {
+  const logoUrl = CLOUDFRONT_URL_LOGO;
+
   const components = {
     Header() {
       const { tokens } = useTheme();
 
       return (
         <View textAlign="center" padding={tokens.space.large}>
-          <Image alt="Contacts App" src="/img/logo.png" />
+          <Image alt="Contacts App" src= {logoUrl} />
         </View>
       );
     },

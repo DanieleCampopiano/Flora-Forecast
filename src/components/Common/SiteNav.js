@@ -1,9 +1,12 @@
+import { CLOUDFRONT_URL_FAVICON } from "../../constants.js";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 
 function SiteNav(props) {
+  const logoUrl = CLOUDFRONT_URL_FAVICON;
+
   const handleLogout = () => {
     props.logOut();
   };
@@ -15,7 +18,7 @@ function SiteNav(props) {
           <Navbar.Brand>
             <img
               alt=""
-              src="/img/logonav.png"
+              src= {logoUrl}
               width="30"
               height="30"
               className="d-inline-block align-top"

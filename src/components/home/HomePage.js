@@ -1,3 +1,4 @@
+import { CLOUDFRONT_URL_IMG } from "../../constants.js";
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
@@ -6,6 +7,8 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function HomePage() {
+  const imgUrl = CLOUDFRONT_URL_IMG;
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -59,7 +62,7 @@ function HomePage() {
     >
       <div style={{ maxWidth: "1100px", textAlign: "center" }}>
         <img
-          src="/img/world.png"
+          src= {imgUrl}
           alt="Mondo"
           style={{ width: "100%", height: "auto" }}
         />
